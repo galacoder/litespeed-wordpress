@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   mysql:
     image: mariadb:10.5.9
@@ -28,9 +28,9 @@ services:
       - ./acme:/root/.acme.sh/
       - ./logs:/usr/local/lsws/logs/
     ports:
-      - 80:80
-      - 443:443
-      - 443:443/udp
+      - 82:80
+      - 446:443
+      - 446:443/udp
       - 7080:7080
     restart: always
     environment:
@@ -43,7 +43,7 @@ services:
       - 8080:8080
       - 8443:8443
     environment:
-        DATABASE_HOST: mysql
+      DATABASE_HOST: mysql
     restart: always
     networks:
       - default
